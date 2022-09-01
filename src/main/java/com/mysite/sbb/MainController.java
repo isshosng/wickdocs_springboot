@@ -11,6 +11,12 @@ public class MainController {
     @RequestMapping("/sbb") // 요청된 URL과 매핑 담당
     @ResponseBody
     public String index() {
-        return "index";
+        return "안녕하세요 sbb에 오신 것을 환영합니다.";
+    }
+
+    @RequestMapping("/")
+    public String root(){
+        return "redirect:/question/list";
     }
 }
+
